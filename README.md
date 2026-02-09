@@ -1,22 +1,20 @@
-# Multimodal RAG: Chat with PDFs via Groq
+# 🧠 PDF Multimodal RAG Project
 
-An AI-powered application that allows users to upload PDF documents and ask complex questions. The system utilizes a Retrieval-Augmented Generation (RAG) architecture to provide accurate, context-aware answers.
+This is a high-performance Retrieval-Augmented Generation (RAG) system built with **Streamlit** and **Groq**. It allows you to chat with PDF documents by combining traditional OCR with AI-generated image captions.
 
-## 🚀 Features
-* **PDF Indexing:** Efficiently parses and indexes PDF content.
-* **Multimodal Context:** Designed to handle text and metadata within documents.
-* **High-Speed Inference:** Powered by **Groq** for near-instant responses.
-* **Interactive UI:** Built with **Streamlit** for a seamless user experience.
+## 🚀 Key Features
+* **Multimodal Extraction:** Uses `pdf2image` and `pytesseract` for text, and **BLIP** for image captioning.
+* **Fast Inference:** Powered by the **Llama-3.3-70b-versatile** model via the Groq API.
+* **Vector Search:** Utilizes **ChromaDB** with **BGE-large-en-v1.5** embeddings for semantic retrieval.
+* **Advanced Architecture:** Implements an encoder-decoder approach with multi-head attention.
 
-## 🛠️ Tech Stack
-* **Language:** Python
-* **LLM API:** Groq (Llama-3/Mixtral)
-* **Framework:** Streamlit
-* **Architecture:** Encoder-Decoder with Multi-head Attention
+## 🛠️ Setup Instructions
+1. **Clone the repo:** `git clone https://github.com/Dannny-cell/multimodal-rag-pdf-Project.git`
+2. **Install Dependencies:** `pip install -r requirements.txt`
+3. **Configure API:** Add your `GROQ_API_KEY` to your environment variables or the sidebar.
+4. **Run App:** `streamlit run app.py`
 
-## 📋 Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Dannny-cell/multimodal-rag-pdf-Project.git](https://github.com/Dannny-cell/multimodal-rag-pdf-Project.git)
-   cd multimodal-rag-pdf-Project
+## 🏗️ Technical Details
+* **Embedding Model:** `BAAI/bge-large-en-v1.5`
+* **Image Captioning:** `Salesforce/blip-image-captioning-base`
+* **Vector Store:** Persistent ChromaDB instance.
